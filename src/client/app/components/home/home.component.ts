@@ -18,7 +18,13 @@ export class HomeComponent implements OnInit {
   public names$: Observable<any>;
   public newName: string;
 
-  constructor(private store: Store<IAppState>, public routerext: RouterExtensions) {}
+  constructor(private store: Store<IAppState>, public routerext: RouterExtensions) {
+    console.log("Hello World");
+    console.dir({
+      Name:"Rakesh",
+      Mobile:"9967452030"
+    });
+  }
 
   ngOnInit() {
     this.names$ = this.store.let(getNames);

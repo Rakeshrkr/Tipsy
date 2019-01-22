@@ -69,6 +69,7 @@
   "license": "MIT",
   "devDependencies": {
     "@angular/compiler-cli": "~4.1.0",
+    "@angular/cli": "~7.2.2",
     "@angular/platform-server": "~4.1.0",
     "@compodoc/compodoc": "^1.0.0-beta.7",
     "@ngrx/store-devtools": "^3.2.4",
@@ -171,6 +172,7 @@
   },
   "dependencies": {
     "@angular/animations": "~4.1.0",
+    "@angular/cli": "~7.2.2",
     "@angular/common": "~4.1.0",
     "@angular/compiler": "~4.1.0",
     "@angular/core": "~4.1.0",

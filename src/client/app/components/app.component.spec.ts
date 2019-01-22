@@ -22,10 +22,12 @@ import { reducer, LanguageProviders } from '../modules/i18n/index';
 import { APP_COMPONENTS } from './index';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const config:Route[] = [
   {path: '', component: HomeComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'contact', component: ContactComponent}
 ];
 
 // test module configuration for each test

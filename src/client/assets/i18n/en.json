@@ -6,6 +6,10 @@
   "ABOUT_ADD": "You want more? Add them yourself!",
   "ABOUT_REWARD": "For reward, here is a list of awesome computer scientists:",
   "INPUT_HINT": "Enter a new computer scientist...",
+  "INPUT_customer_ID_HINT":"Enter Login ID",
+  "INPUT_customer_Name_HINT":"Enter Your Name",
+  "INPUT_email_HINT":"Enter Your Email",
+  "INPUT_mobile_HINT":"Enter Your Mobile number",
   "ADD_BTN_TEXT": "Add",
   "SUCCESS_MSG": "Your deployment of Angular Seed Advanced worked perfectly."
 }

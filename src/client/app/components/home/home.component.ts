@@ -7,7 +7,20 @@ import { Observable } from 'rxjs/Observable';
 import { RouterExtensions, Config } from '../../modules/core/index';
 import { IAppState, getNames } from '../../modules/ngrx/index';
 import { NameList } from '../../modules/sample/index';
+import { Http, RequestOptions} from '@angular/http';
+import { Headers } from '@angular/http';
 
+// class  Customer {
+
+//   customer_ID : string;
+  
+//   customer_Name: string;
+  
+//   email: string;
+  
+//   mobile: string;
+  
+// }
 @Component({
   moduleId: module.id,
   selector: 'sd-home',
@@ -17,6 +30,8 @@ import { NameList } from '../../modules/sample/index';
 export class HomeComponent implements OnInit {
   public names$: Observable<any>;
   public newName: string;
+  // public customer : Customer;
+  private http: Http;
 
   constructor(private store: Store<IAppState>, public routerext: RouterExtensions) {
     console.log("Hello World");
@@ -40,6 +55,20 @@ export class HomeComponent implements OnInit {
     this.newName = '';
     return false;
   }
+
+  // addName (body: Object): Observable<Customer> {
+  //   var API_URL = NameList.APIURL;
+  //   var Access_token = NameList.Access_Token;
+  //   let bodyString = JSON.stringify(body); // Stringify payload
+  //   let headers      = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+  //   let options       = new RequestOptions({headers:headers}); //RequestOptions({ headers: headers }); // Create a request option
+
+  //   return this.http.post(API_URL + 'Customers?access_token=' + Access_token, body, options) // ...using post request
+  //                    .map(function(res){
+
+  //                    }) // ...and calling .json() on the response to return data
+  //                    .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  // }  
 
   readAbout() {
     // Try this in the {N} app

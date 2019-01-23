@@ -1,7 +1,7 @@
 // angular
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-
+import { Http, RequestOptions} from '@angular/http';
+import { Headers } from '@angular/http';
 // libs
 import { Observable } from 'rxjs/Observable';
 
@@ -24,7 +24,21 @@ export class NameListService extends Analytics {
   }
 
   getNames(): Observable<Array<string>> {
-    return this.http.get(`${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/data.json`)
-      .map(res => res.json());
+    // return this.http.get(`${Config.IS_MOBILE_NATIVE() ? '/' : ''}assets/data.json`)
+    //   .map(res => res.json());
+    var API_URL = NameList.APIURL;
+    var Access_token = NameList.Access_Token;
+    return this.http
+    .get(API_URL + 'Customers?access_token=' + Access_token)
+    .map(function(res){
+      console.dir(res.json())
+      var output =  res.json();
+      var arr = new Array();
+      output.forEach(function (value) {
+        arr.push(value.customer_Name);
+      });
+     
+      return arr;
+    });
   }
 }

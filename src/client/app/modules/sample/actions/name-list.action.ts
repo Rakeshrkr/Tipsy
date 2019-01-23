@@ -9,6 +9,8 @@ import { type } from '../../core/utils/index';
 export namespace NameList {
   // Category to uniquely identify the actions
   export const CATEGORY: string = 'NameList';
+  export const APIURL: string = "http://localhost:3000/api/";
+  export const Access_Token: string = "DSoHL8Aru4tDZFnC88qIdK9weQNWxv4JBUcwh9Te8E8YgdEkxdPrzHpGrhB10Mkn";
 
   /**
    * For each action type in an action group, make a simple
